@@ -1,0 +1,382 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   height: 100vh;
+   background: #000718;
+   overflow-x: hidden;
+}
+header{
+   background: rgb(0, 0, 18);
+}
+
+nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 80%;
+   margin: 0 auto;
+   height: 90px;
+   color: white;
+
+}
+
+nav h1 {
+   font-size: 32px;
+   letter-spacing: 2.5px;
+   font-weight: 500;
+}
+
+.desktop a {
+   text-decoration: none;
+   color: white;
+   cursor: pointer;
+}
+
+.desktop a:hover {
+   color: red;
+}
+
+/*  This style is for visible nav */
+.first-nav {
+   display: none;
+   height: 80px;
+   background: #00040f;
+   border-bottom: 3px solid rgb(209, 1, 1);
+   text-align: center;
+   padding: 30px;
+   font-size: 30px;
+   color: white;
+   cursor: pointer;
+}
+.first-nav-icon:hover{
+   scale: 1.1;
+   transition: 0.15s ease-in-out;
+}
+
+.nav-links {
+   text-decoration: none;
+   color: rgb(26, 3, 3);
+   margin: 0 70px;
+   font-size: 20px;
+   font-weight: bold;
+   color: white;
+   letter-spacing: 2px;
+}
+
+.nav-links .active{
+   color: rgb(255, 255, 255);
+   background: red;
+   padding: 10px 15px;
+   border-radius: 24px;
+}
+
+
+
+/*   image gallery css */
+
+.content-div {
+   color: white;
+   text-align: center;
+   margin: 20px auto;
+}
+
+.content-div h1 {
+   margin: 30px auto 10px;
+   letter-spacing: 1.5px;
+   font-size: 60px;
+}
+
+.content-div p{
+   font-size: 19px;
+   letter-spacing: 1.5px;
+}
+.gallery {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ 
+ .image-popup {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   width: 100%;
+   height: 100%;
+   transform: translate(-50%, -50%);
+   z-index: 9999;
+   background-color: #000718df;
+   padding: 20px;
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 8px;
+   
+ }
+
+ 
+ .image-popup img {
+   max-width: 600px;
+   max-height: 60vh;
+   border-top: 40px solid white;
+   border-bottom: 5px solid white;
+   border-left: 5px solid white;
+   border-right: 5px solid white;
+   border-radius: 5px;
+
+   
+ }
+ 
+ .close-icon {
+   position: absolute;
+   top: 80px;
+   right: 100px;
+   color: #ffffff;
+
+   font-size: 24px;
+   cursor: pointer;
+ }
+ 
+ .image-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 10px;
+   width: 80%;
+   margin: 50px auto;
+
+ }
+ 
+ .image-grid img {
+   width: 100%;
+   height: auto;
+   cursor: pointer;
+   
+ }
+
+ .image-grid img:hover {
+  scale: 1.02;
+  transition: 0.5s ease ;
+ }
+
+ .galleryBtn { 
+   text-decoration: none;
+   background: red;
+   width: 40%;
+   padding: 15px;
+   color: white;
+   font-size: 21px;
+   font-weight: bold;
+   text-align: center;
+   letter-spacing: 1.5px;
+   margin-bottom: 100px;
+   border-radius: 60px;
+}
+
+.galleryBtn:hover {
+   background: transparent;
+   border: 1px solid red;
+   transition: 0.5s ease;
+}
+
+
+
+
+/*  CSS for uiDesigns */
+
+.ui-section{
+   display: Flex;
+   color: white;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+}
+
+
+.ui-section h1{
+ margin: 200px auto 20px auto;
+ font-size: 40px;
+}
+
+.ui-section p {
+   font-size: 20px;
+   letter-spacing: 2px;
+}
+
+
+.ui-section .link{
+   color: rgb(255, 0, 0);
+   text-decoration: none;
+}
+
+
+
+
+/* ========404 PAGE CSS========== */
+.notfound-section{
+   color: white;
+   display: flex;
+   flex-direction:column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   margin: 100px auto;
+   
+}
+
+.notfound-section img {
+   width: 40%;
+   margin-bottom: 10px;
+}
+
+.notfound-section h2 {
+   font-size: 20px;
+   margin-bottom: 10px;
+   letter-spacing:2px;
+}
+
+.notfound-section p{
+   font:  17px;
+   letter-spacing: 1px;
+   margin-bottom: 40px;
+}
+
+.notfound-section .btn {
+   background: rgb(255, 255, 255);
+   padding: 15px 30px;
+   border-radius: 30px;
+   text-decoration: none;
+   color: #00040f;
+   font-size: 18px;
+   font-weight: bold;
+   letter-spacing: 0.9pxq21                                             ;
+   
+}
+/* ======= MEDIA QUERIES FOR MOBILE DEVICE ========*/
+
+@media screen and (max-width: 480px) {
+   .image-grid {
+     grid-template-columns: 1fr;
+   }
+ 
+   .image-popup {
+     padding: 10px;
+   }
+ 
+   .close-icon {
+     font-size: 18px;
+   }
+
+
+
+   .content-div h1{
+      font-size: 30px;
+   }
+
+   .content-div p{
+      font-size: 14px;
+    
+   }
+
+ 
+   /* ====== MEDIA QUERRY FOR NAV */
+
+   
+   nav {
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 50%;
+      width: 60%;
+      background: red;
+      padding: 20px;
+      z-index: 1000;
+   }
+
+   .nav-icon {
+      font-size: 25px;
+      cursor: pointer;
+   }
+
+   nav h1 {
+      font-size: 30px;
+   }
+
+   .nav-links {
+      display: block;
+      text-align: center;
+      margin-bottom: 20px auto;
+     
+   }
+
+   .nav-links .active{
+      background: white;
+      color: red;
+   }
+
+   .galleryBtn {
+      width: 60%;
+      font-size: 12px;
+      border-radius: 25px;
+      font-size: 14px;
+   }
+
+   .first-nav{
+      display: block;
+   }
+
+
+.desktop{
+   display: none;
+}
+
+
+
+
+/* =======ui-section Media query */
+
+.ui-section h1{
+ font-size: 32px;
+ text-align: center;
+ margin-top: 40px;
+}
+
+.ui-section p {
+   font-size: 16px;
+   width: 230px;
+   text-align: center;
+   letter-spacing: 2px;
+}
+
+.mobile-logo-link {
+   color: white;
+   text-decoration: none;
+}
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
